@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="interface2lua.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="myapp.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="config_data.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="hs_query_callbacks.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\hs_common\MyLuaWrapper.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\hs_common\HSSystem.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\hs_common\hs_sessionmgr.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\hs_common\hs_session.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\hs_common\hs_packetworker.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\hs_common\hs_odbc.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\hs_common\hs_object.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\hs_common\hs_server_channel.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myapp.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="config_data.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="hs_test_eventhandler.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="hs_query_callbacks.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\singleton.hpp">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\MyLuaWrapper.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\HSSystem.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\HSConfigReader.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_std.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_sessionmgr.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_session.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_server.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_packetworker.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_odbc.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_object.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_list.hpp">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_ioservice_pool.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_eventhandler.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_define.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_connector.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_channel.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_buffer.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_acceptor.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\config_file.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_service.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\hs_common\hs_server_channel.h">
+      <Filter>header\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="interface2lua.pkg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="header">
+      <UniqueIdentifier>{8f033813-f9b1-4aab-a8b3-506737d508ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{d58d7482-c3b4-4060-8fb8-aaf02ad8db14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header\common">
+      <UniqueIdentifier>{8dda73f7-813f-4a4c-847f-a8032af58bb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\common">
+      <UniqueIdentifier>{70e78129-0151-47f8-bab7-02c13841ab67}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

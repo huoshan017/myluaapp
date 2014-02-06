@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5C6AD177-2D06-4500-89E0-19617F521E18}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>luatest</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <UseOfAtl>false</UseOfAtl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <TargetExt>.exe</TargetExt>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <CustomBuildBeforeTargets>Build</CustomBuildBeforeTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\bin</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\bin</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\develop\open_source\tolua++-1.0.93\include;..\..\..\..\develop\open_source\lua-5.1.5\src;..\..\..\..\develop\open_source\boost_1_53_0;..\..\..\..\develop\open_source\tinyxml;..\..\..\..\develop\open_source\jsoncpp-src-0.5.0\include;..\..\..\hs_common;..\..\..\..\develop\open_source\protobuf-2.5.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\..\develop\open_source\tolua++\tolua++\Debug;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\system\build\msvc-10.0\debug\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\date_time\build\msvc-10.0\debug\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\chrono\build\msvc-10.0\debug\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\regex\build\msvc-10.0\debug\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\thread\build\msvc-10.0\debug\link-static\threading-multi;..\..\..\..\develop\open_source\tinyxml\Debugtinyxml;..\..\..\..\develop\open_source\jsoncpp-src-0.5.0\build\lib;..\..\..\..\develop\open_source\protobuf-2.5.0\vsprojects\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libtolua++.lib;libboost_system-vc100-mt-gd-1_53.lib;libboost_date_time-vc100-mt-gd-1_53.lib;libboost_regex-vc100-mt-gd-1_53.lib;libboost_chrono-vc100-mt-gd-1_53.lib;libboost_thread-vc100-mt-gd-1_53.lib;tinyxml.lib;lib_jsonmdd.lib;libprotoc.lib;libprotobuf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>I:\develop\open_source\tolua++\tolua++\Release\tolua++.exe -o interface2lua.cpp interface2lua.pkg </Command>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\develop\open_source\tolua++-1.0.93\include;..\..\..\..\develop\open_source\lua-5.1.5\src;..\..\..\..\develop\open_source\boost_1_53_0;..\..\..\..\develop\open_source\tinyxml;..\..\..\..\develop\open_source\jsoncpp-src-0.5.0\include;..\..\..\hs_common;..\..\..\..\develop\open_source\protobuf-2.5.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\..\develop\open_source\tolua++\tolua++\Release;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\system\build\msvc-10.0\release\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\date_time\build\msvc-10.0\release\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\regex\build\msvc-10.0\release\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\chrono\build\msvc-10.0\release\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\thread\build\msvc-10.0\release\link-static\threading-multi;..\..\..\..\develop\open_source\tinyxml\Releasetinyxml;..\..\..\..\develop\open_source\jsoncpp-src-0.5.0\build\lib;..\..\..\..\develop\open_source\protobuf-2.5.0\vsprojects\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libtolua++.lib;libboost_system-vc100-mt-1_53.lib;libboost_date_time-vc100-mt-1_53.lib;libboost_regex-vc100-mt-1_53.lib;libboost_chrono-vc100-mt-1_53.lib;libboost_thread-vc100-mt-1_53.lib;tinyxml.lib;lib_jsonmd.lib;libprotoc.lib;libprotobuf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\..\develop\open_source\tolua++-1.0.93\include;..\..\..\..\develop\open_source\lua-5.1.5\src;..\..\..\..\develop\open_source\boost_1_53_0;..\..\..\..\develop\open_source\tinyxml;..\..\..\..\develop\open_source\jsoncpp-src-0.5.0\include;..\..\..\hs_common;..\..\..\..\develop\open_source\protobuf-2.5.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\..\..\..\develop\open_source\tolua++\tolua++\Debug;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\system\build\msvc-10.0\debug\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\date_time\build\msvc-10.0\debug\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\chrono\build\msvc-10.0\debug\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\regex\build\msvc-10.0\debug\link-static\threading-multi;..\..\..\..\develop\open_source\boost_1_53_0\bin.v2\libs\thread\build\msvc-10.0\debug\link-static\threading-multi;..\..\..\..\develop\open_source\tinyxml\Debugtinyxml;..\..\..\..\develop\open_source\jsoncpp-src-0.5.0\build\lib;..\..\..\..\develop\open_source\protobuf-2.5.0\vsprojects\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libtolua++.lib;libboost_system-vc100-mt-gd-1_53.lib;libboost_date_time-vc100-mt-gd-1_53.lib;libboost_regex-vc100-mt-gd-1_53.lib;libboost_chrono-vc100-mt-gd-1_53.lib;libboost_thread-vc100-mt-gd-1_53.lib;tinyxml.lib;lib_jsonmdd.lib;libprotoc.lib;libprotobuf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\..\develop\open_source\tolua++-1.0.93\include;..\..\..\..\develop\open_source\lua-5.1.5\src;..\..\..\..\develop\open_source\boost_1_53_0;..\..\..\..\develop\open_source\tinyxml;..\..\..\..\develop\open_source\jsoncpp-src-0.5.0\include;..\..\..\hs_common;..\..\..\..\develop\open_source\protobuf-2.5.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\hs_common\HSSystem.cpp" />
+    <ClCompile Include="..\..\..\hs_common\hs_object.cpp" />
+    <ClCompile Include="..\..\..\hs_common\hs_odbc.cpp" />
+    <ClCompile Include="..\..\..\hs_common\hs_packetworker.cpp" />
+    <ClCompile Include="..\..\..\hs_common\hs_server_channel.cpp" />
+    <ClCompile Include="..\..\..\hs_common\hs_session.cpp" />
+    <ClCompile Include="..\..\..\hs_common\hs_sessionmgr.cpp" />
+    <ClCompile Include="..\..\..\hs_common\MyLuaWrapper.cpp" />
+    <ClCompile Include="config_data.cpp" />
+    <ClCompile Include="hs_query_callbacks.cpp" />
+    <ClCompile Include="interface2lua.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="myapp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\hs_common\config_file.h" />
+    <ClInclude Include="..\..\..\hs_common\HSConfigReader.h" />
+    <ClInclude Include="..\..\..\hs_common\HSSystem.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_acceptor.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_buffer.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_channel.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_connector.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_define.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_eventhandler.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_ioservice_pool.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_list.hpp" />
+    <ClInclude Include="..\..\..\hs_common\hs_object.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_odbc.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_packetworker.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_server.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_server_channel.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_service.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_session.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_sessionmgr.h" />
+    <ClInclude Include="..\..\..\hs_common\hs_std.h" />
+    <ClInclude Include="..\..\..\hs_common\MyLuaWrapper.h" />
+    <ClInclude Include="..\..\..\hs_common\singleton.hpp" />
+    <ClInclude Include="config_data.h" />
+    <ClInclude Include="hs_query_callbacks.h" />
+    <ClInclude Include="hs_test_eventhandler.h" />
+    <ClInclude Include="myapp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="interface2lua.pkg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

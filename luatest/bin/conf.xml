@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<target_define login_server="1" gate_server="2" world_server="3" game_server="4" center_server="5" db_server="6" />
+	<listen ip="localhost" port="9101" />
+	<db server_name="my_server" user_name="root" password="123456" />
+	<gate_channel>
+		<item id="1" listen="localhost" connect="127.0.0.1" port="10122" />
+	</gate_channel>
+</config>

@@ -1,0 +1,67 @@
+$#include "HSSystem.h"
+$#include "config_file.h"
+$#include "hs_std.h"
+
+class vector
+{
+
+};
+
+class map
+{
+
+};
+
+class list
+{
+
+};
+
+class deque
+{
+
+};
+
+class HSSystem
+{
+	static void Sleep(int secs);
+	static void MSleep(int msecs);
+	static void USleep(int usecs);
+	static const char* GetCurrentDir();
+};
+
+class HSValue
+{
+public:
+	bool AsBool();
+	char AsChar();
+	unsigned char AsUchar();
+	short AsShort();
+	unsigned short AsUshort();
+	int AsInt();
+	unsigned int AsUint();
+	float AsFloat();
+	double AsDouble();
+	long AsLong();
+	unsigned long AsUlong();
+	const char* AsCString();
+};
+
+class IntKeyConfigFile
+{
+public:
+	const char* GetData(const int& key, const char* field);
+	HSValue* GetHSValue(const int& key, const char* field);
+};
+
+class UintKeyConfigFile
+{
+	const char* GetData(const unsigned int& key, const char* field);
+	HSValue* GetHSValue(const unsigned int& key, const char* field);
+};
+
+class StringKeyConfigFile
+{
+	const char* GetData(const string& key, const char* field);
+	HSValue* GetHSValue(const string& key, const char* field);
+};
